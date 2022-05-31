@@ -2,4 +2,4 @@
 for n in range(ord('z'), ord('a') - 1, -1):
     if n % 2 != 0:
         n = n - 32
-    print("{:n}".format(n), end='')
+    print("{:c}".format(n), end='')
