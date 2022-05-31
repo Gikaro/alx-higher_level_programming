@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for k in range(ord('z'), ord('a') - 1, -1):
-    if k % 2 != 0:
-        k = k - 32
-    print("{:k}".format(k), end='')
+for n in range(ord('z'), ord('a') - 1, -1):
+    if n % 2 != 0:
+        n = n - 32
+    print("{:n}".format(n), end='')
