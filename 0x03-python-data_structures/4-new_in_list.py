@@ -2,7 +2,8 @@
 def new_in_list(my_list, idx, element):
     """
 
-    Replaces an element in a list at a specefic position without modifiying the original list
+    Replaces an element in a list at a specefic position without modifiying
+    the original list
 
     Args:
         my_list: the original list
