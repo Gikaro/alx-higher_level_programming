@@ -8,6 +8,11 @@ Rectangle module
 class Rectangle:
     """
     Rectangle class
+
+    Attributes:
+        width (int): private instance variable
+        height (int): private instance variable
+
     """
     def __init__(self, width=0, height=0):
         """
@@ -38,6 +43,7 @@ class Rectangle:
 
         Args:
             value (int): a positive integer
+
         Raises:
             TypeError: if value not an integer
             ValueError: if value is negative
@@ -93,3 +99,15 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width + self.__height)*2
+
+    def __str__(self):
+        """
+        Prints out the rectangle
+
+        Returns:
+            (str): the geometric format with "#"
+
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return (('#'*self.__width + "\n")*self.__height)[:-1]
