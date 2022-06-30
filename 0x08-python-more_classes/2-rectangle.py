@@ -8,11 +8,6 @@ Rectangle module
 class Rectangle:
     """
     Rectangle class
-
-    Attributes:
-        width (int): private instance variable
-        height (int): private instance variable
-
     """
     def __init__(self, width=0, height=0):
         """

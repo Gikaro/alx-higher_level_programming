@@ -100,3 +100,14 @@ class Rectangle:
             return 0
         return (self.__width + self.__height)*2
 
+    def __str__(self):
+        """
+        Prints out the rectangle
+
+        Returns:
+            (str): the geometric format with "#"
+
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return (('#'*self.__width + "\n")*self.__height)[:-1]
