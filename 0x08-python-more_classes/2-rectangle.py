@@ -8,10 +8,6 @@ Rectangle module
 class Rectangle:
     """
     Rectangle class
-
-    Attributes:
-        width (int): private attribute
-        height (int): private attribute
     """
     def __init__(self, width=0, height=0):
         """
@@ -32,9 +28,9 @@ class Rectangle:
 
         Returns:
             (int): the width of the rectangle
-
         """
         return self.__width
+
     @width.setter
     def width(self, value):
         """
@@ -42,7 +38,6 @@ class Rectangle:
 
         Args:
             value (int): a positive integer
-
         Raises:
             TypeError: if value not an integer
             ValueError: if value is negative
@@ -75,3 +70,26 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """
+        Returns the area of the rectangle
+
+        Returns:
+            (int): the rectangle area
+        
+        """
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """
+        Returns the perimeter of the rectangle
+
+        Returns:
+            (0): if one of width or height is none
+            (int): the rectangle perimiter
+
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return (self.__width + self.__height)*2
