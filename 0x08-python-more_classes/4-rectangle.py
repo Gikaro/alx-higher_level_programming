@@ -59,23 +59,14 @@ class Rectangle:
     def height(self):
         """
         Height getter
-
-        Returns:
-            (int): the height of the rectangle
-
         """
-        return self.__height
 
-    @height.setter
-    def height(self, value):
-        """
-        Height setter
-        """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
 
     def area(self):
         """
@@ -111,3 +102,12 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         return (('#'*self.__width + "\n")*self.__height)[:-1]
+    def __repr__(self):
+        """
+        The canonical string representation of the class
+
+        Returns:
+            (str): The string representation of the class
+
+        """
+        return 'Rectangle({}, {})'.format(self.__width, self.__height)
