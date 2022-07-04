@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Is same Class module"""
 
+
 def is_same_class(obj, a_class):
     """Returns if an object is an instance of the given class ou nn
 
